@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 498615256}
   - component: {fileID: 498615258}
   - component: {fileID: 498615257}
+  - component: {fileID: 498615259}
   m_Layer: 5
   m_Name: HighScore
   m_TagString: Untagged
@@ -326,6 +327,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498615255}
   m_CullTransparentMesh: 1
+--- !u!114 &498615259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498615255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2974b86b07b614993885d0b79410d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetHighScoreNow: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basketPrefab: {fileID: 2185583546312743417, guid: f65b817213197964fb933b3fcb676a23, type: 3}
-  numBaskets: 3
   bottom: -14
   spacing: 2
   basketList: []
@@ -635,6 +648,7 @@ GameObject:
   - component: {fileID: 1911953837}
   - component: {fileID: 1911953839}
   - component: {fileID: 1911953838}
+  - component: {fileID: 1911953840}
   m_Layer: 5
   m_Name: ScoreCounter
   m_TagString: Untagged
@@ -682,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1,000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -759,6 +773,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911953836}
   m_CullTransparentMesh: 1
+--- !u!114 &1911953840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911953836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea35e6af0516e7a428d7df19447806e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  score: 0
 --- !u!1001 &6444721289962833076
 PrefabInstance:
   m_ObjectHideFlags: 0

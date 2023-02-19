@@ -32,8 +32,8 @@ public class Basket : MonoBehaviour
         GameObject collided = coll.gameObject;
         if (collided.CompareTag("Apple"))
         {
-            Destroy(collided);
-            scoreCounter.score += 100;
+            Destroy(collided.gameObject);
+            scoreCounter.score += 1;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
         }
     } 

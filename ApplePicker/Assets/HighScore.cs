@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour
 {
-    static private Text _UI_TEXT;
-    static private int _SCORE = 100;
+    static private Text highscoreText;
+    static private int highscore = 0;
     private Text txtCom;
 
     void Awake()
     {
-        _UI_TEXT = GetComponent<Text>();
+        highscoreText = this.GetComponent<Text>();
 
         if (PlayerPrefs.HasKey("HighScore"))
         {
@@ -22,14 +22,14 @@ public class HighScore : MonoBehaviour
 
     static public int SCORE
     {
-        get { return _SCORE; }
+        get { return highscore; }
         private set
         {
-            _SCORE = value;
+            highscore = value;
             PlayerPrefs.SetInt("HighScore", value);
-            if (_UI_TEXT != null)
+            if (highscoreText != null)
             {
-                _UI_TEXT.text = "High Score: " + value.ToString("#,0");
+                highscoreText.text = "High Score: " + value.ToString("#,0");
             }
         }
     }
